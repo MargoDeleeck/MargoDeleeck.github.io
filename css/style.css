@@ -1,0 +1,281 @@
+* {
+ box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #f5f5f5;
+  font-family: 'Karla', sans-serif;
+}
+
+/* Grid */
+img {
+  width: 100%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+img:hover {
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+  width: 100%;
+  height: 230px;
+}
+
+.grid {
+  width: 90%;
+  margin: auto 6%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid-sizer, .grid-item{
+ width: 30%;
+ margin-right: 3.3%;
+ margin-bottom: 3.3%;
+ display: inline;
+}
+.grid-item {
+  border-radius: 6px;
+  background: whitesmoke;
+}
+
+.grid-item p {
+ padding: 5px 10px;
+ font-family: 'Karla', sans-serif;
+ font-size: 0.8em;
+ color: gray;
+ transition: 0.4s;
+ opacity: 1;
+}
+
+.grid-item:hover p {
+ opacity: 1;
+}
+
+p::after{
+ content:'';
+ height: 2px;
+ width: 14px;
+ display: block;
+ margin-top: 5px;
+ background-color: #1ACBCB;
+}
+
+/* Nav */
+.header{
+  position: relative;
+  display: block;
+  background-color: #1ACBCB;
+  z-index: 3;
+}
+ul{
+  width: 50%;
+}
+.ul2{
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+nav {
+  background-color: #211938;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+button {
+  padding: 20px;
+  color: white;
+  background: none;
+  border: 0;
+  text-decoration: none;
+  transition: 0.5s;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+}
+button:focus {
+   outline: none;
+}
+button:hover{
+ color: #1ACBCB;
+ border-bottom:2px solid #1ACBCB;
+ margin-bottom:-2px;
+}
+
+
+/* Header */
+header h1, header h3 {
+  color: #f5f5f5;
+  font-weight: bold;
+  padding: 0 20% 0 20%;
+  font-family: 'Karla', sans-serif;
+ text-align: left;
+}
+
+header h1 {
+  font-size: 4em;
+}
+
+header h3 {
+  font-size: 1.5em;
+  line-height: 1.4;
+}
+
+#cv a {
+  background-color: #211938;
+  color: white;
+  font-weight: bold;
+  width: 10%;
+  text-align: center;
+  display: block;
+  margin: 20px 0 0 20%;
+
+  border: solid 0.3px lightgray;
+  border-radius: 5px;
+  border-radius: 50px;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 0.9em;
+
+  text-decoration: none;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.8em;
+}
+
+#cv a:hover {
+  cursor: pointer;
+  background-color: #211938;
+  transition: all 0.3 ease;
+}
+
+header {
+  animation: springIn 0.1s both 0.1s;
+  animation-name: verschijnen;
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+h1, h3, #cv {
+  animation: springIn 0.5s both 0.5s;
+  animation-name: verschijnen;
+  opacity: 0;
+  animation-duration: 1.5s;
+}
+
+.grid-item a {
+  color: #1ACBCB;
+}
+
+@keyframes verschijnen {
+      100% {
+            opacity: 1;
+      }
+}
+
+/* MEDIAQUERIES */
+
+@media screen and (max-width: 1200px){
+ .ul2{
+  width: 60%;
+ }
+ #cv a {
+   width: 12%;
+ }
+}
+
+@media screen and (max-width: 1312px){
+ .ul2{
+  width: 60%;
+ }
+ #cv a {
+   width: 12%;
+ }
+}
+
+@media screen and (max-width: 1096px){
+ .ul2{
+  width: 60%;
+ }
+ #cv a {
+   width: 15%;
+ }
+}
+
+@media screen and (max-width: 900px){
+ .grid-sizer, .grid-item{
+  width: 45%;
+ }
+ .ul2{
+  width: 80%;
+ }
+ #cv a {
+   width: 18%;
+ }
+}
+
+@media screen and (max-width: 737px){
+ #cv a {
+   width: 23%;
+ }
+}
+
+@media screen and (max-width: 600px){
+ .grid-sizer, .grid-item{
+  width: 100%;
+ }
+ nav{
+
+    text-align: center;
+    background-color: #211938;
+  }
+  .ul2{
+    display: block;
+    width: 100%;
+  }
+  .ul2 button{
+   margin: 10px;
+   padding: 0;
+  }
+
+  button:hover{
+   color: #1ACBCB;
+   border-bottom:2px solid #1ACBCB;
+   margin-bottom:-2px;
+   text-decoration: none;
+  }
+
+ #cv a {
+   width: 25%;
+ }
+
+ .grid-item p {
+  opacity: 1;
+ }
+}
+
+@media screen and (max-width: 536px){
+ #cv a {
+   width: 30%;
+ }
+}
+
+@media screen and (max-width: 449px){
+ #cv a {
+   width: 35%;
+ }
+}
