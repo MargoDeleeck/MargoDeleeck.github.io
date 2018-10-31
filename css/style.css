@@ -53,7 +53,7 @@ iframe {
   font-size: 0.8em;
   color: gray;
   transition: 0.4s;
-  opacity: 0;
+  opacity: 1;
 }
 
 .grid-item:hover p {
