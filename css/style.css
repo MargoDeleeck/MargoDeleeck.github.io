@@ -16,9 +16,9 @@ img {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
 }
 
-img:hover {
+/*img:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
+}*/
 
 iframe {
   width: 100%;
